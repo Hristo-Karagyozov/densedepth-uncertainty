@@ -47,7 +47,7 @@ $ cd DenseDepth-Pytorch
 * *Step 3:*  To train,
 
 ```python
-python desedepth/train.py --epochs 10 \
+python densedepth/train.py --epochs 10 \
                           --batch 4 \
                           --save "directory where checkpoints are to saved" \
                           --device "cuda" \

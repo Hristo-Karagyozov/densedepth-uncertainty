@@ -64,8 +64,8 @@ def loadZipToMem(zip_file):
     data = {name: input_zip.read(name) for name in input_zip.namelist()}
     nyu2_train = list(
         (
-            row.split(",")
-            for row in (data["data/nyu2_train.csv"]).decode("utf-8").split("\n")
+            [path.strip() for path in row.split(",")]
+            for row in (data["nyu2_train.csv"]).decode("utf-8").split("\n")
             if len(row) > 0
         )
     )
